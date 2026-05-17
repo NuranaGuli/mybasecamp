@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — MyBaseCamp</title>
+  <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+
+  <nav>
+    <a href="dashboard.html" class="logo">MyBaseCamp</a>
+
+    <div class="nav-right">
+      <span class="badge-admin">Admin</span>
+
+      <div class="user-info">
+        <div class="avatar">NG</div>
+        <span class="user-name">Nurana Guliyeva</span>
+      </div>
+
+      <a href="login.html" class="btn-logout">Logout</a>
+    </div>
+  </nav>
+
+  <div class="main">
+
+    <div class="alert" id="alertMsg"></div>
+
+    <div class="page-header">
+      <div>
+        <h1 class="page-title">Hello, Nurana! 👋</h1>
+        <p class="page-subtitle">You can manage all your projects from here</p>
+      </div>
+
+      <a href="projects.html" class="btn-primary">+ New project</a>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <p class="stat-label">Projects</p>
+        <p class="stat-value" id="statProjects">3</p>
+      </div>
+
+      <div class="stat-card">
+        <p class="stat-label">Users</p>
+        <p class="stat-value blue">12</p>
+      </div>
+
+      <div class="stat-card">
+        <p class="stat-label">Your role</p>
+        <p class="stat-value green">Admin</p>
+      </div>
+    </div>
+
+    <div class="section-header">
+      <h2 class="section-title">Projects</h2>
+      <span class="count-badge" id="projectCount">3 projects</span>
+    </div>
+
+    <div class="projects-list" id="projectsList">
+
+      <div class="project-card" data-id="1">
+        <div class="project-info">
+          <p class="project-name">Website update</p>
+          <p class="project-meta">Created: 28 Apr 2026 · Owner: You</p>
+        </div>
+
+        <div class="project-actions">
+          <a href="projects.html" class="btn-edit">Edit</a>
+          <button class="btn-delete"
+            data-id="1" data-name="Website update">Delete</button>
+        </div>
+      </div>
+
+      <div class="project-card" data-id="2">
+        <div class="project-info">
+          <p class="project-name">Mobile app</p>
+          <p class="project-meta">Created: 15 Apr 2026 · Owner: You</p>
+        </div>
+
+        <div class="project-actions">
+          <a href="projects.html" class="btn-edit">Edit</a>
+          <button class="btn-delete"
+            data-id="2" data-name="Mobile app">Delete</button>
+        </div>
+      </div>
+
+      <div class="project-card" data-id="3">
+        <div class="project-info">
+          <p class="project-name">API integration</p>
+          <p class="project-meta">Created: 10 Apr 2026 · Owner: Nigar M.</p>
+        </div>
+
+        <div class="project-actions">
+          <a href="projects.html" class="btn-edit">Edit</a>
+          <button class="btn-delete"
+            data-id="3" data-name="API integration">Delete</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="empty-state" id="emptyState" style="display:none;">
+      <div class="empty-icon">📂</div>
+      <p class="empty-title">No projects yet</p>
+      <p class="empty-text">Start by creating a new project</p>
+    </div>
+
+  </div>
+
+  <script src="../js/dashboard.js"></script>
+</body>
+</html>

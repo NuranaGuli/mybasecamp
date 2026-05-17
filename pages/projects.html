@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project — MyBaseCamp</title>
+  <link rel="stylesheet" href="../css/projects.css">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-left">
+      <a href="dashboard.html" class="logo">MyBaseCamp</a>
+      <span class="nav-sep">/</span>
+      <span class="nav-current" id="navCurrent">New project</span>
+    </div>
+    <a href="login.html" class="btn-logout">Logout</a>
+  </nav>
+
+  <div class="page-center">
+    <div class="content-wrapper">
+
+      <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
+
+      <h1 class="page-title" id="pageTitle">Create new project</h1>
+      <p class="page-subtitle" id="pageSubtitle">Enter project details</p>
+
+      <div class="form-card">
+        <p class="form-section-title">Project information</p>
+
+        <form action="/projects" method="POST" id="projectForm">
+
+          <div class="form-group">
+            <label for="projectName" class="required">Project name</label>
+            <input type="text" id="projectName" name="name"
+              placeholder="e.g. New website, Mobile app..."
+              required maxlength="100" autocomplete="off">
+            <span class="error-text" id="nameError">Project name is required</span>
+            <p class="form-hint">Up to 100 characters</p>
+          </div>
+
+          <div class="form-group">
+            <label for="projectDesc">Description</label>
+            <textarea id="projectDesc" name="description"
+              placeholder="Short description about the project..."
+              maxlength="500" oninput="updateCounter(this)"></textarea>
+            <div class="char-counter" id="charCounter">0 / 500</div>
+          </div>
+
+          <div class="form-actions">
+            <a href="dashboard.html" class="btn-cancel">Cancel</a>
+            <button type="submit" class="btn-submit" id="submitBtn">Create project</button>
+          </div>
+
+        </form>
+      </div>
+
+      <div class="danger-zone" id="dangerZone" style="display:none;">
+        <p class="danger-title">Danger zone</p>
+        <p class="danger-text">
+          If you delete this project, all data will be permanently removed
+          and this action cannot be undone.
+        </p>
+        <button class="btn-danger" id="deleteBtn">Delete this project</button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="../js/project.js"></script>
+</body>
+</html>

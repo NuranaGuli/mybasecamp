@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel — MyBaseCamp</title>
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+
+  <nav>
+    <a href="dashboard.html" class="logo">MyBaseCamp</a>
+
+    <div class="nav-right">
+      <span class="badge-admin">Admin</span>
+      <div class="avatar">AH</div>
+      <a href="login.html" class="btn-logout">Logout</a>
+    </div>
+  </nav>
+
+  <div class="layout">
+
+    <aside class="sidebar">
+      <p class="sidebar-title">Navigation</p>
+      <a href="dashboard.html" class="sidebar-link">Projects</a>
+      <a href="admin.html" class="sidebar-link active">Users</a>
+
+      <div class="sidebar-divider"></div>
+
+      <p class="sidebar-title">Account</p>
+      <a href="login.html" class="sidebar-link">Logout</a>
+    </aside>
+
+    <main class="main">
+
+      <div class="page-header">
+        <div>
+          <h1 class="page-title">Manage users</h1>
+          <p class="page-subtitle">Change roles, delete users</p>
+        </div>
+
+        <span class="admin-tag">⚙ Admin panel</span>
+      </div>
+
+      <div class="alert" id="alertBox"></div>
+
+      <div class="summary-bar">
+        <div class="summary-pill" id="statTotal">
+          Total: <span>4</span> users
+        </div>
+
+        <div class="summary-pill" id="statAdmin">
+          Admin: <span>1</span>
+        </div>
+
+        <div class="summary-pill" id="statUser">
+          Regular: <span>3</span>
+        </div>
+      </div>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>User</th>
+              <th>Email</th>
+              <th>Role</th>
+              <th>Date</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            <tr data-user-id="1">
+              <td>
+                <div class="user-cell">
+                  <div class="user-avatar av-green">NG</div>
+                  <div>
+                    <p class="user-fullname">Nurana Guliyeva</p>
+                    <p class="user-date">nurana_g</p>
+                  </div>
+                </div>
+              </td>
+
+              <td class="email-cell">nurana@example.com</td>
+              <td><span class="role-badge admin">Admin</span></td>
+              <td class="date-cell">1 Mar 2026</td>
+
+              <td class="actions-cell">
+                <button class="btn-sm remove-admin" disabled>Remove admin</button>
+                <button class="btn-sm delete-user" disabled>Delete</button>
+              </td>
+            </tr>
+
+            <tr data-user-id="2">
+              <td>
+                <div class="user-cell">
+                  <div class="user-avatar av-purple">MM</div>
+                  <div>
+                    <p class="user-fullname">Mahammad Mirzayev</p>
+                    <p class="user-date">mahammad_m</p>
+                  </div>
+                </div>
+              </td>
+
+              <td class="email-cell">mahammad@example.com</td>
+              <td><span class="role-badge user">User</span></td>
+              <td class="date-cell">5 Mar 2026</td>
+
+              <td class="actions-cell">
+                <button class="btn-sm make-admin btn-make-admin"
+                  data-user-id="2" data-user-name="Mahammad Mirzayev">
+                  Make admin
+                </button>
+
+                <button class="btn-sm delete-user btn-delete-user"
+                  data-user-id="2" data-user-name="Mahammad Mirzayev">
+                  Delete
+                </button>
+              </td>
+            </tr>
+
+            <tr data-user-id="3">
+              <td>
+                <div class="user-cell">
+                  <div class="user-avatar av-amber">RS</div>
+                  <div>
+                    <p class="user-fullname">Rauf Sultanov</p>
+                    <p class="user-date">rauf_s</p>
+                  </div>
+                </div>
+              </td>
+
+              <td class="email-cell">rauf@example.com</td>
+              <td><span class="role-badge user">User</span></td>
+              <td class="date-cell">12 Mar 2026</td>
+
+              <td class="actions-cell">
+                <button class="btn-sm make-admin btn-make-admin"
+                  data-user-id="3" data-user-name="Rauf Sultanov">
+                  Make admin
+                </button>
+
+                <button class="btn-sm delete-user btn-delete-user"
+                  data-user-id="3" data-user-name="Rauf Sultanov">
+                  Delete
+                </button>
+              </td>
+            </tr>
+
+            <tr data-user-id="4">
+              <td>
+                <div class="user-cell">
+                  <div class="user-avatar av-blue">LH</div>
+                  <div>
+                    <p class="user-fullname">Leyla Huseynova</p>
+                    <p class="user-date">leyla_h</p>
+                  </div>
+                </div>
+              </td>
+
+              <td class="email-cell">leyla@example.com</td>
+              <td><span class="role-badge user">User</span></td>
+              <td class="date-cell">20 Apr 2026</td>
+
+              <td class="actions-cell">
+                <button class="btn-sm make-admin btn-make-admin"
+                  data-user-id="4" data-user-name="Leyla Huseynova">
+                  Make admin
+                </button>
+
+                <button class="btn-sm delete-user btn-delete-user"
+                  data-user-id="4" data-user-name="Leyla Huseynova">
+                  Delete
+                </button>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="../js/admin.js"></script>
+</body>
+</html>
